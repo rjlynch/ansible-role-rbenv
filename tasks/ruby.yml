@@ -1,0 +1,11 @@
+---
+- name: Install ruby
+  become: true
+  command: $SHELL -lc "rbenv install {{ rbenv_ruby_version }}"
+    
+- name: Set global ruby version
+  become: true
+  command: $SHELL -lc "rbenv global {{ rbenv_ruby_version }}"
+
+- name: Rehash rbenv
+  command: $SHELL -lc "rbenv rehash"
