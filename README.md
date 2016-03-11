@@ -1,6 +1,7 @@
 Rbenv ansible role
 =========
 [![Build Status](https://travis-ci.org/spitfast/ansible-role-rbenv.svg?branch=master)](https://travis-ci.org/spitfast/ansible-role-rbenv)
+
 Ansible role for system-wide installation of [rbenv](https://github.com/rbenv/rbenv) and rbenv [ruby-build](https://github.com/rbenv/ruby-build) plugin.
 
 Requirements
