@@ -3,7 +3,7 @@ galaxy_info:
   description: System-wide installation of rbenv
   license: MIT
   
-  min_ansible_version: 1.2
+  min_ansible_version: 1.9
   
   platforms:
   - name: Ubuntu
