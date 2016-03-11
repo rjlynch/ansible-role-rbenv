@@ -6,16 +6,17 @@ Ansible role for system-wide installation of [rbenv](https://github.com/rbenv/rb
 Requirements
 ------------
 
-None.
+Ansible version **2.0.1**
 
 Role Variables
 --------------
-
-	rbenv_version: v1.0.0
-	rbenv_repo_path: https://github.com/rbenv/rbenv.git
-	rbenv_ruby_build_repo_path: https://github.com/sstephenson/ruby-build.git
-	rbenv_root_path: /usr/local/rbenv
-	rbenv_ruby_version: 2.2.3
+```yaml
+---
+rbenv_version: v1.0.0
+rbenv_repo_path: https://github.com/rbenv/rbenv.git
+rbenv_ruby_build_repo_path: https://github.com/sstephenson/ruby-build.git
+rbenv_root_path: /usr/local/rbenv
+rbenv_ruby_version: 2.2.3
 
 Dependencies
 ------------
