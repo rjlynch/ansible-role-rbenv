@@ -29,5 +29,5 @@ script:
 after_script:
   - ruby -v
 
-# notifications:
-#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
