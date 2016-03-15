@@ -10,7 +10,7 @@
   tags: rbenv
 
 - name: Check if ruby {{ rbenv_ruby_version }} is installed
-  shell: $SHELL -lc "rbenv versions | grep {{ rbenv_ruby_version }}"
+  command: $SHELL -lc "rbenv versions | grep {{ rbenv_ruby_version }}"
   become: true
   register: is_ruby_installed
   ignore_errors: yes
