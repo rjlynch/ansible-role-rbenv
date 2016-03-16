@@ -1,6 +1,6 @@
 galaxy_info:
   author: "Gordon Shumway"
-  description: System-wide installation of rbenv
+  description: Install rbenv and ruby-build plugin for specified user.
   license: MIT
   
   min_ansible_version: 1.9

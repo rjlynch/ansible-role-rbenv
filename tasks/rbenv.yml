@@ -1,7 +1,6 @@
 ---
 
 - name: Cloning rbenv repository
-  become: true
   git: repo={{ rbenv_repo_path }} 
        dest={{ rbenv_root_path }}
        update=no
@@ -13,5 +12,4 @@
 
 - name: Compile dynamic bash extension to speed up rbenv (ignore if it fails)
   command: $SHELL -lc "cd {{ rbenv_root_path }} && src/configure && make -C src"
-  become: true
   ignore_errors: yes
