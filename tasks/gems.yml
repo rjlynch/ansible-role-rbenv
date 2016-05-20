@@ -1,0 +1,5 @@
+---
+
+- name: Installing gems
+  gem: name={{ item.gem }} state={{ item.version }}
+  with_items: "{{ rbenv_gems }}"
