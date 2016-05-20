@@ -2,7 +2,7 @@ Rbenv ansible role
 =========
 [![Build Status](https://travis-ci.org/spitfast/ansible-role-rbenv.svg?branch=master)](https://travis-ci.org/spitfast/ansible-role-rbenv)
 
-Ansible role that installs [rbenv](https://github.com/rbenv/rbenv) and rbenv [ruby-build](https://github.com/rbenv/ruby-build) plugin for specified user.
+An ansible role that installs [rbenv](https://github.com/rbenv/rbenv) and rbenv [ruby-build](https://github.com/rbenv/ruby-build) plugin for specified user.
 
 Requirements
 ------------
@@ -19,6 +19,8 @@ rbenv_ruby_build_repo_path: https://github.com/sstephenson/ruby-build.git
 rbenv_user: vagrant
 rbenv_root_path: "/home/{{ rbenv_user }}/.rbenv"
 rbenv_ruby_version: 2.3.1
+rbenv_gems:
+  - { gem: 'bundler', version: 'latest' }
 ```
 
 Dependencies

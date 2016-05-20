@@ -17,3 +17,6 @@
 - include: ruby.yml
   when: is_ruby_installed|failed
   tags: rbenv
+
+- include: gems.yml
+  tags: rbenv
