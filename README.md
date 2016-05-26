@@ -18,7 +18,7 @@ rbenv_repo_path: https://github.com/rbenv/rbenv.git
 rbenv_ruby_build_repo_path: https://github.com/sstephenson/ruby-build.git
 rbenv_user: vagrant
 rbenv_root_path: "/home/{{ rbenv_user }}/.rbenv"
-rbenv_ruby_version: 2.3.1
+rbenv_ruby_version: 2.3.0
 rbenv_gems:
   - { gem: 'bundler', version: 'latest' }
 ```
@@ -33,7 +33,7 @@ Example Playbook
 
     - hosts: localhost
   	  roles:
-    	- rbenv
+    	- spitfast.rbenv
 
 License
 -------
@@ -43,4 +43,4 @@ MIT
 Author Information
 ------------------
 
-[Gordon Sumway](https://github.com/spitfast/)
+[Gordon Shumway](https://github.com/spitfast/)
