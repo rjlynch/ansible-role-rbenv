@@ -13,6 +13,6 @@ galaxy_info:
   galaxy_tags:
     - rbenv
     - ruby
-    - ruby_gems
+    - gems
 
 dependencies: []

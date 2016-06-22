@@ -1,5 +1,5 @@
 ---
 
 - name: Installing gems
-  gem: name={{ item.gem }} state={{ item.version }}
+  command: $SHELL -lc "{{ rbenv_root_path }}/shims/gem install --no-rdoc --no-ri {{ item }}"
   with_items: "{{ rbenv_gems }}"
