@@ -1,23 +1,19 @@
 ---
 
-- include: dependencies.yml
+- include_tasks: dependencies.yml
   tags: [rbenv]
 
-- include: rbenv.yml
+- include_tasks: rbenv.yml
   tags: [rbenv]
 
-- include: ruby-build.yml
+- include_tasks: ruby-build.yml
   tags: [rbenv]
 
-- name: Check if ruby {{ rbenv_ruby_version }} is installed
-  command: $SHELL -lc "rbenv versions | grep {{ rbenv_ruby_version }}"
-  register: is_ruby_installed
-  ignore_errors: yes
-  tags: [rbenv]
+- include_tasks: ruby-version.yml
+  with_items: "{{ rbenv_ruby_versions }}"
 
-- include: ruby.yml
-  when: is_ruby_installed|failed
-  tags: [rbenv]
+- name: "Set global ruby version to {{ rbenv_global_ruby_version }}"
+  command: $SHELL -lc "rbenv global {{ rbenv_global_ruby_version }}"
 
-- include: gems.yml
-  tags: [rbenv, gems]
+- name: Rehash rbenv
+  command: $SHELL -lc "rbenv rehash"

@@ -1,0 +1,18 @@
+---
+
+- name: "Check if ruby {{ item }} is installed"
+  command: $SHELL -lc "rbenv versions | grep {{ item }}"
+  register: ruby_version_installed
+  ignore_errors: yes
+  tags: [rbenv]
+
+- name: "Install ruby {{ item }}"
+  command: $SHELL -lc "rbenv install {{ item }}"
+  tags: [rbenv]
+  when: ruby_version_installed|failed
+
+- name: Installing gems
+  command: $SHELL -lc "{{ rbenv_root_path }}/shims/gem install --no-rdoc --no-ri {{ gem }}"
+  with_items: "{{ rbenv_gems }}"
+  loop_control:
+    loop_var: gem
