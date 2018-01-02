@@ -19,7 +19,6 @@ rbenv_user: vagrant
 rbenv_root_path: "/home/{{ rbenv_user }}/.rbenv"
 rbenv_ruby_versions:
   - 2.4.2
-  - 2.3.0
 rbenv_global_ruby_version: 2.4.2
 rbenv_gems:
   - bundler
