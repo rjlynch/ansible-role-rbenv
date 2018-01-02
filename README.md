@@ -55,5 +55,5 @@ MIT
 Author Information
 ------------------
 
-[Gordon Shumway](https://github.com/spitfast/)
+[Gordon Shumway](https://github.com/spitfast/)  
 [Richard Lynch](https://github.com/rjlynch/)
