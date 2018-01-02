@@ -19,6 +19,7 @@ rbenv_user: vagrant
 rbenv_root_path: "/home/{{ rbenv_user }}/.rbenv"
 rbenv_ruby_versions:
   - 2.4.2
+  - 2.3.0
 rbenv_global_ruby_version: 2.4.2
 rbenv_gems:
   - bundler
@@ -46,16 +47,6 @@ Example Playbook
   roles:
 	- rbenv-role
 ```
-
-Usage
-----
-Create your playbook (described in the section above) and run one of the following commands:
-
-`$ ansible-playbook playbook.yml` - to run all tasks in role
-
-`$ ansible-playbook playbook.yml --tags=gems` - to run only gems installation task
-
-`$ ansible-playbook playbook.yml --skip-tags=gems` - to run only rbenv installation task (without gems)
 
 License
 -------
