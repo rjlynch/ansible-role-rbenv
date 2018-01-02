@@ -12,7 +12,8 @@
   when: ruby_version_installed|failed
 
 - name: Installing gems
-  command: $SHELL -lc "{{ rbenv_root_path }}/shims/gem install --no-rdoc --no-ri {{ gem }}"
+  command: $SHELL -lc "rbenv shell {{ item  }} && {{ rbenv_root_path }}/shims/gem install --no-rdoc --no-ri {{ gem }}"
+  tags: [gems]
   with_items: "{{ rbenv_gems }}"
   loop_control:
     loop_var: gem
